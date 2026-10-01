@@ -86,7 +86,7 @@ class GameScene: SKScene {
         node.position = initialPosition
         addChild(node)
         
-        let objectspeed = NSTimeInterval(arc4random_uniform(gameSpeed!))
+        let objectspeed = NSTimeInterval(arc4random_uniform(gameSpeed!) + 1)
         
         let endPosition = CGPoint(x: -radius, y: initialPosition.y)
         let action = SKAction.moveTo(endPosition, duration: objectspeed)
